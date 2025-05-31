@@ -1,0 +1,20 @@
+.nav-full{
+    display: block;
+    position: fixed;
+    padding: min(2rem, 3%);
+    width: clamp(200px, 20vw, 300px);
+    height: 97%;
+    border-right: 0.8px solid var(--text-color);
+    color: var(--text-color);
+}
+
+.nav-icons{
+    display: block;
+
+    position: fixed;
+    padding: min(0.4rem, 1%);
+    width: clamp(100px, 10vw, 200px);
+    height: 97%;
+    border-right: 0.8px solid var(--text-color);
+    color: var(--text-color);
+}
