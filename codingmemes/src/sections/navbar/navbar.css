@@ -1,20 +1,28 @@
-.nav-full{
+.nav-full {
     display: block;
     position: fixed;
-    padding: min(2rem, 3%);
-    width: clamp(200px, 20vw, 300px);
-    height: 97%;
-    border-right: 0.8px solid var(--text-color);
+    padding: 2rem;
+    width: 15%;
+    height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     color: var(--text-color);
+    z-index: 100;
 }
 
-.nav-icons{
-    display: block;
-
+.nav-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
-    padding: min(0.4rem, 1%);
-    width: clamp(100px, 10vw, 200px);
-    height: 97%;
-    border-right: 0.8px solid var(--text-color);
+    padding: 1rem;
+    width: 10%;
+    min-width: 70px;
+    height: 100vh;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     color: var(--text-color);
+    z-index: 100;
 }

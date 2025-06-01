@@ -1,18 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './App.css';
-import Nav from './sections/navbar/navbar.jsx';
-const App = () => {
-  
+import Home from './pages/home/home';
 
+const App = () => {
   return (
-    <>
-      <div className="App">
-        <Nav/>
-      </div>
-    </>
-  )
+    <div className="App">
+      <Home />
+    </div>
+  );
 }
 
-export default App
+export default App;

@@ -28,7 +28,15 @@ a{
     min-width: 125px;
     min-height: 20px;
     background-color: var(--background-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
 }
+.nav-buttons:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(8px) scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
 .icon-buttons{
     display: flex;
     padding: min(1rem, 2%);
@@ -39,6 +47,13 @@ a{
     min-height: 20px;
     margin: min(2rem, 10%);
     background-color: var(--background-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+}
+.icon-buttons:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
 .divider{
@@ -56,5 +71,12 @@ a{
     height: auto;
     margin-right: 10px;
     color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1000px) {
+    .icon {
+        font-size: 1.8rem;
+    }
 }
 

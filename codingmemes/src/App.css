@@ -1,17 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
-:root{
+
+:root {
     --green: rgb(21, 131, 48);
     --text-color: rgb(253, 253, 253);
     --background-color: rgb(0, 0, 0);
 }
-body{
-    background-color: black;
-    margin: 0%;
-    padding: 0%;
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
 }
-.App{
+
+.App {
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
     width: 100%;
+    overflow-x: hidden;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 25%;
+    padding: 2rem;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+    .main-content {
+        margin-left: 80px;
+    }
+}
+
+* {
+    box-sizing: border-box;
 }

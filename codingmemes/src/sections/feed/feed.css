@@ -1,0 +1,62 @@
+.feed-layout {
+    display: flex;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.feed-container {
+    flex: 1;
+    max-width: 75%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.post-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post-header h3 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.post-header span {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+.post-content {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.feed-section {
+    flex: 1;
+    padding: 2rem;
+    margin-left: 15%;
+    margin-right: 22%;
+    width: 63%;
+    overflow-y: auto;
+}
+
+@media (max-width: 1000px) {
+    .feed-section {
+        margin-left: 10%;
+        margin-right: 22%;
+        width: 68%;
+    }
+}
