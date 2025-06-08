@@ -1,0 +1,72 @@
+.decor{
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://picsum.photos/800/600');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+}
+
+.login-container {
+    display: flex;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+.login-image {
+    flex: 1;
+    background-image: url('https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    color: white;
+}
+
+.image-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Bad Script', cursive;
+}
+
+.image-overlay p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+    
+    .login-image {
+        height: 30vh;
+    }
+    
+    .image-overlay h1 {
+        font-size: 2.5rem;
+    }
+}

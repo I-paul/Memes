@@ -1,0 +1,111 @@
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    background: linear-gradient(45deg, var(--text-color), var(--green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.3s ease;
+}
+
+.input-group:focus-within .input-icon {
+    color: var(--green);
+}
+
+input {
+    width: 100%;
+    padding: 1.2rem 1rem 1.2rem 3rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--green);
+    box-shadow: 0 0 0 3px rgba(21, 131, 48, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.auth-button {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(45deg, var(--green), rgb(25, 150, 55));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(21, 131, 48, 0.2);
+}
+
+.auth-button:hover {
+    box-shadow: 0 6px 20px rgba(21, 131, 48, 0.3);
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.link-button {
+    background: none;
+    border: none;
+    color: var(--green);
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.link-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: var(--green);
+    transition: all 0.3s ease;
+}
+
+.link-button:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
