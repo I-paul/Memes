@@ -29,7 +29,7 @@ const Links = ({ icons }) => {
                     <ul>
                         <button className="nav-buttons">
                             <Home className='icon' />
-                            <a href="">Home</a>
+                            <a href="/home">Home</a>
                         </button>
                     </ul>
                     <ul>

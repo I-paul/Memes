@@ -1,7 +1,8 @@
 import React from 'react';
 import './userProfile.css';
+import { useNavigate } from 'react-router-dom';
 
-const UserProfile = () => {
+const UserProfile = ({ isHomePage = false }) => {
     const user = {
         username: "JohnDoe",
         profilePic: "https://picsum.photos/100",
@@ -14,12 +15,16 @@ const UserProfile = () => {
             { id: 2, username: "Mike", pic: "https://picsum.photos/51" },
         ]
     };
+    const navigate = useNavigate();
+    const handleTravel = () => {
+        navigate('/profile');
+    }
 
     return (
         <div className="user-profile-section">
             <div className="profile-header">
                 <img src={user.profilePic} alt="profile" className="main-profile-pic" />
-                <h2>{user.username}</h2>
+                <h2 onClick={handleTravel}>{user.username}</h2>
             </div>
             
             <div className="stats">

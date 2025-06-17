@@ -1,0 +1,195 @@
+.profile-page-layout {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: var(--background-color);
+}
+
+.profile-content {
+    flex: 1;
+    margin-left: 15%;
+    overflow-y: auto;
+}
+
+.profile-posts {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.profile-posts h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 1000px) {
+    .profile-content {
+        margin-left: 10%;
+    }
+}
+
+
+.profile-info {
+    margin-top: -80px;
+    padding: 0 2rem;
+}
+
+.profile-header {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-end;
+}
+
+.profile-pic-container {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.profile-pic-container img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--background-color);
+    object-fit: cover;
+}
+
+.edit-profile-pic {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: var(--green);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-name-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.profile-name-section h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.edit-profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: transparent;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    color: var(--green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.edit-profile-btn:hover {
+    background: var(--green);
+    color: white;
+}
+
+.profile-stats {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.profile-meta {
+    color: var(--text-color);
+}
+
+.meta-items {
+    display: flex;
+    gap: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.meta-items span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-posts {
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.profile-posts h2 {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.post-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+    transform: scale(1.02);
+}
+
+.post-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1000px) {
+    .profile-content {
+        margin-left: 10%;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-stats {
+        justify-content: center;
+    }
+
+    .meta-items {
+        justify-content: center;
+    }
+}

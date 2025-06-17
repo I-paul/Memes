@@ -1,5 +1,5 @@
 import './login.css';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import LoginForm from '../../sections/forms/LoginForm';
@@ -11,13 +11,24 @@ const Login = () => {
 
     const handleLogin = (data) => {
         console.log('Login:', data);
+
+
         navigate('/home');
     };
 
-    const handleSignup = (data) => {
-        console.log('Signup:', data);
-        // Handle signup logic
-        setIsLogin(true); // Switch to login after successful signup
+    const handleSignup = async (data) => {
+        const res = await fetch('http://localhost:5000/api/auth/signup', 
+            {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+        const formData = await res.json();
+        console.log('Signup:', formData);
+
+        setIsLogin(true); 
     };
 
     return (

@@ -1,11 +1,11 @@
-import React from 'react';
+import { useState } from 'react';
 import { Mail, Lock, User } from 'lucide-react';
 import './forms.css';
 
 const SignupForm = ({ onLoginClick, onSubmit }) => {
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
-    const [username, setUsername] = React.useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [username, setUsername] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
